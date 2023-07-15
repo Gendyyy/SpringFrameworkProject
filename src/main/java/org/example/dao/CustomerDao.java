@@ -4,7 +4,8 @@ import org.example.domain.Customer;
 
 import java.util.ArrayList;
 
-public class CustomerDao {
+
+public class CustomerDao implements IDao{
     private ArrayList<Customer> customers;
 
     public ArrayList<Customer> getCustomers() {

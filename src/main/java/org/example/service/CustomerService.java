@@ -7,5 +7,4 @@ import org.example.dao.CustomerDao;
 public class CustomerService {
     private CustomerDao customerDao;
 
-
 }
