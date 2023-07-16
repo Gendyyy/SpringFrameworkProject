@@ -7,10 +7,10 @@ import org.example.domain.Customer;
 import java.util.ArrayList;
 
 
-@Service("PRDDao")
-public class CustomerDao implements IDao{
+@Service("MockDao")
+public class MockCustomerDao implements IDao{
     private ArrayList<Customer> customers;
-    @Value("this is customer 1")
+    @Value("this is customer 2")
     private String text;
 
     public void getCustomer(){
