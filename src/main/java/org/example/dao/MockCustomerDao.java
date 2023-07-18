@@ -1,5 +1,6 @@
 package org.example.dao;
 
+import org.example.config.annotations.Profile;
 import org.example.config.annotations.Service;
 import org.example.config.annotations.Value;
 import org.example.domain.Customer;
@@ -7,7 +8,8 @@ import org.example.domain.Customer;
 import java.util.ArrayList;
 
 
-@Service("MockDao")
+@Service
+@Profile("one")
 public class MockCustomerDao implements IDao{
     private ArrayList<Customer> customers;
     @Value("this is customer 2")
@@ -23,5 +25,9 @@ public class MockCustomerDao implements IDao{
 
     public void addCustomers(Customer customer) {
         customers.add(customer);
+    }
+//    @Scheduled(fixedDelay = 10000)
+    public void showTextScheduled(){
+        System.out.println("hello");
     }
 }

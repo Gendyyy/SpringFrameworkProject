@@ -1,7 +1,6 @@
 package org.example.service;
 
 import org.example.config.annotations.Inject;
-import org.example.config.annotations.Qualifier;
 import org.example.config.annotations.Service;
 import org.example.dao.IDao;
 
@@ -11,7 +10,7 @@ public class CustomerService {
     private IDao customerDao;
 
     @Inject
-    public CustomerService(@Qualifier("PRDDao") IDao customerDao) {
+    public CustomerService(IDao customerDao) {
         this.customerDao = customerDao;
     }
 
